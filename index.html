@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana De Canha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto"
+    rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="isotype">
+          </div>
+          <figure class="isologo">
+            <img src="images/isologo.svg" alt="AnaDeCanha_Logo">
+          </figure>
+          <span class="contact">
+            <button type="button" name="button">CONTACT</button>
+          </span>
+        </div>
+      </div>
+      <div class="icons">
+        <div class="container">
+          <span class="icon"><img src="images/instagram.svg" alt=""> </span>
+          <span class="icon"><img src="images/facebook.svg" alt=""> </span>
+          <span class="icon"><img src="images/twitter.svg" alt=""> </span>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Hi! My name is Ana and I'm a <br><u>web designer</u></h1>
+    </div>
+    <section class="intro">
+      <div class="container">
+        <div class="intro-left">
+          <p>
+            I'm a photography lover and finding new places makes me happy.<br>
+            My work is basicaly UI design and develop with HTML and CSS,
+            and a little bit of JavaScript of course. Go and check out my
+            portfolio and my repositories.
+            I love making animations with CSS <br>like this one...
+          </p>
+        </div>
+        <div class="intro-right">
+          <div class="card">
+            <div id="mainDiv">
+            <div id="boxDiv">
+                <div id="front"></div>
+                <div id="back"></div>
+                <div id="left"></div>
+                <div id="right"></div>
+                <div id="top"></div>
+                <div id="bottom"></div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <figure class="right">
+        <img src="images/right.svg" alt="">
+      </figure>
+    </section>
+    <div class="container">
+      <span class="special">
+        <p>
+          Or this one...
+        </p>
+      </span>
+    </div>
+    <section class="demostration">
+      <figure class="left">
+        <img src="images/left.svg" alt="">
+      </figure>
+      <div class="container">
+        <div class="intro-left">
+          <div class="card">
+            <div class="platzi">
+              <div class="platzi-left"></div>
+              <div class="platzi-top"></div>
+            </div>
+          </div>
+        </div>
+        <div class="intro-right">
+        </div>
+      </div>
+    </section>
+    <section class="youtube">
+      <div class="container">
+        <div class="intro-left">
+          <p>
+            Also, I started a spanish Youtube channel about web  design.
+            Take a look!
+          </p>
+        </div>
+        <div class="intro-right">
+          <span class="youtube-icon">
+            <img src="images/youtube.svg" alt="">
+          </span>
+          <div class="youtube-ball">
+          </div>
+          <div class="youtube-ball2">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+
+      const $cubo = document.getElementById('boxDiv');
+
+      const animation = $cubo.animate(
+        [
+          { transform: 'rotateX(0) rotateY(0)'},
+
+          { transform: 'rotateX(360deg) rotateY(360deg)' }
+        ],{
+
+            duration: 17000,
+            easing: 'linear',
+            iterations: Infinity,
+        }
+      )
+
+
+      $cubo.addEventListener('mouseover', (e) => animation.playbackRate = 4 );
+      $cubo.addEventListener('mouseleave', (e) => animation.playbackRate = 1 )
+
+
+    </script>
+  </body>
+</html>

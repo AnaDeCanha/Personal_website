@@ -1,0 +1,363 @@
+html {
+  max-width: 100vw;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  background-color: #4E2E56;
+  color: #FFF9F2;
+  display: flex;
+  max-width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  background-image: linear-gradient(to bottom right, #4A0038, #4E2E56, #7A375C);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  font-size: 45px;
+  /* position: absolute; */
+  display: block;
+  line-height: 50px;
+  margin-top: 40px;
+}
+
+.container {
+  width: 1024px;
+  display: flex;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+}
+
+.isotype {
+  display: flex;
+  width: 33.3%;
+}
+
+.isologo {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 40px;
+  width: 33.3%;
+}
+
+.isologo img {
+  height: 120px;
+}
+
+.contact {
+  display: flex;
+  margin-top: 40px;
+  width: 33.3%;
+  justify-content: flex-end;
+  height: 20px;
+}
+
+button{
+  color: #FFF9F2;
+  background-color: inherit;
+  border: none;
+  font-size: 17px;
+}
+
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.icon {
+  margin: 15px;
+}
+
+.icon img {
+  width: 50px;
+}
+
+.special{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 140px 0 0;
+}
+
+.intro, .demostration, .youtube{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.demostration{
+  margin-bottom: 50px;
+}
+
+.intro-left{
+  display: flex;
+  width: 50%;
+  margin: 0;
+  align-self: flex-start;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.intro-right{
+  display: flex;
+  width: 50%;
+  margin: 0;
+  align-self: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-start;
+}
+
+.right {
+  position: absolute;
+  top: 170px;
+  left: 550px;
+  /* transform: rotate(15deg); */
+}
+
+.right img {
+  width: 250px;
+}
+
+.left {
+  position: absolute;
+top: -50px;
+/* left: 640px; */
+right: 450px;
+transform: rotate(15deg);
+}
+
+.left img {
+  width: 200px;
+}
+
+.youtube>div>div {
+  justify-content: center;
+  align-self: center;
+}
+
+.youtube-icon {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+/* -----------------------cube-------------------------- */
+
+
+  #mainDiv {
+      display: flex;
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      perspective: 800px;
+  }
+
+  #boxDiv {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      transform-style: preserve-3d;
+  }
+
+  #boxDiv div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      opacity: 0.5;
+      color: white;
+      background-color: #FFF9F2;
+      box-shadow: 0 0 6px #4A0038;
+  }
+
+  #front {
+      transform: translateZ(100px);
+  }
+
+
+  #back {
+      transform: rotateY(180deg) translateZ(100px);
+  }
+
+  #left {
+      transform: rotateY(-90deg) translateX(-100px);
+      transform-origin: left;
+  }
+
+  #right {
+      transform: rotateY(90deg) translateX(100px);
+      transform-origin: right;
+  }
+
+  #top {
+      transform: rotateX(-90deg) translateY(-100px);
+      transform-origin: top;
+  }
+
+  #bottom {
+      transform: rotateX(90deg) translateY(100px);
+      transform-origin: bottom;
+  }
+
+  /* --------------------------loading state------------------ */
+
+  .platzi {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 40px auto;
+    transform: rotate(45deg);
+    animation-name: platzi-base;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    will-change: opacity, transform;
+  }
+
+  .platzi-left {
+    width: 100%;
+    height:100%;
+    border: 45px solid #FFF9F2;
+    box-sizing: border-box;
+    position: relative;
+    top: 1px;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+
+  }
+
+  .platzi-top {
+    width: 100%;
+    height:100%;
+    border: 45px solid #FFF9F2;
+    box-sizing: border-box;
+    position: absolute;
+    top: 1px;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-name: platzi-top;
+    will-change: background-color, transform;
+  }
+
+
+  @keyframes platzi-base {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(.3);
+    }
+    30%{
+      opacity: 1;
+      transform: rotate(405deg) scale(.8);
+    }
+    80% {
+      opacity: 1;
+      transform: rotate(405deg) scale(.8);
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(0deg) scale(.3);
+    }
+  }
+
+  @keyframes platzi-top {
+    0%{
+      transform: rotate(0);
+
+    }
+    20%{
+      transform: rotate(45deg);
+      background-color: #FFF9F2;
+    }
+    50%{
+      transform: rotate(45deg);
+      background-color: #FFF9F2;
+    }
+    70%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(0);
+    }
+  }
+
+/* ----------------------------youtube----------------- */
+
+
+
+.youtube-ball{
+  width: 189px;
+  height: 189px;
+  border: 5px solid #FFF9F2;
+  border-radius: 60%;
+  position: absolute;
+  margin: 0;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: scale;
+  will-change: opacity, transform;
+}
+
+.youtube-ball2{
+  width: 189px;
+  height: 189px;
+  border: 5px solid #FFF9F2;
+  border-radius: 60%;
+  position: absolute;
+  margin: 0;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: scale;
+  animation-delay: .5s;
+  will-change: opacity, transform;
+}
+
+@keyframes scale {
+  0%{
+    transform: scale(1);
+
+  }
+  20%{
+    opacity: .5;
+  }
+
+  70%{
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
