@@ -9,6 +9,14 @@
     rel="stylesheet">
   </head>
   <body>
+    <div class="overlay" id="overlay">
+      <div class="modal" id="modal">
+        <p>I'd love to work with you, <br>please write me :)</p>
+        <a class="email-icon" href="mailto: anadecanha@gmail.com">
+          <img src="images/email.svg" alt="">
+        </a>
+      </div>
+    </div>
     <header>
       <div class="container">
         <div class="header">
@@ -17,16 +25,37 @@
           <figure class="isologo">
             <img src="images/isologo.svg" alt="AnaDeCanha_Logo">
           </figure>
-          <span class="contact">
+          <span class="contact" id="button-two">
             <button type="button" name="button">CONTACT</button>
           </span>
         </div>
       </div>
-      <div class="icons">
+      <div class="icons" id="bar">
         <div class="container">
-          <span class="icon"><img src="images/instagram.svg" alt=""> </span>
-          <span class="icon"><img src="images/facebook.svg" alt=""> </span>
-          <span class="icon"><img src="images/twitter.svg" alt=""> </span>
+          <div class="isotype" id="isotype">
+            <span>
+              <img  src="images/isotype.svg" alt="">
+            </span>
+          </div>
+          <div class="isotype">
+            <a href="https://www.instagram.com/anadecanha/"
+              target="_blank" class="icon">
+              <img src="images/instagram.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/anadecanha.professional/"
+              target="_blank" class="icon">
+              <img src="images/facebook.svg" alt="">
+            </a>
+            <a href="https://twitter.com/AnaDeCanha?lang=es"
+              target="_blank" class="icon">
+              <img src="images/twitter.svg" alt="">
+            </a>
+          </div>
+          <div class="isotype" id="button">
+            <span class="contact" >
+              <button type="button" name="button">CONTACT</button>
+            </span>
+          </div>
         </div>
       </div>
     </header>
@@ -40,8 +69,10 @@
             I'm a photography lover and finding new places makes me happy.<br>
             My work is basicaly UI design and develop with HTML and CSS,
             and a little bit of JavaScript of course. Go and check out my
-            portfolio and my repositories.
-            I love making animations with CSS <br>like this one...
+            <a href="https://www.behance.net/anadecanhadd3a" target="_blank">
+            <u>portfolio</u></a> and my <a href="https://github.com/AnaDeCanha"
+            target="_blank"><u>repositories</u></a>. I love making animations
+            with CSS <br>like this one...
           </p>
         </div>
         <div class="intro-right">
@@ -58,10 +89,10 @@
         </div>
           </div>
         </div>
+        <figure class="right">
+          <img src="images/right.svg" alt="">
+        </figure>
       </div>
-      <figure class="right">
-        <img src="images/right.svg" alt="">
-      </figure>
     </section>
     <div class="container">
       <span class="special">
@@ -71,15 +102,16 @@
       </span>
     </div>
     <section class="demostration">
-      <figure class="left">
-        <img src="images/left.svg" alt="">
-      </figure>
       <div class="container">
+        <figure class="left">
+          <img src="images/left.svg" alt="">
+        </figure>
         <div class="intro-left">
           <div class="card">
             <div class="platzi">
               <div class="platzi-left"></div>
               <div class="platzi-top"></div>
+              <div class="platzi-bottom"></div>
             </div>
           </div>
         </div>
@@ -96,38 +128,20 @@
           </p>
         </div>
         <div class="intro-right">
-          <span class="youtube-icon">
-            <img src="images/youtube.svg" alt="">
-          </span>
-          <div class="youtube-ball">
-          </div>
-          <div class="youtube-ball2">
-          </div>
+          <a href="https://www.youtube.com/channel/UCBZMW9dN0pq_PTxUtet8-Cw?view_as=subscriber"
+            target="_blank" class="youtube-icon">
+            <span class="youtube-icon">
+             <img src="images/youtube.svg" alt="">
+            </span>
+            <div class="youtube-ball">
+            </div>
+            <div class="youtube-ball2">
+            </div>
+          </a>
         </div>
       </div>
     </section>
-    <script type="text/javascript">
-
-      const $cubo = document.getElementById('boxDiv');
-
-      const animation = $cubo.animate(
-        [
-          { transform: 'rotateX(0) rotateY(0)'},
-
-          { transform: 'rotateX(360deg) rotateY(360deg)' }
-        ],{
-
-            duration: 17000,
-            easing: 'linear',
-            iterations: Infinity,
-        }
-      )
-
-
-      $cubo.addEventListener('mouseover', (e) => animation.playbackRate = 4 );
-      $cubo.addEventListener('mouseleave', (e) => animation.playbackRate = 1 )
-
-
+    <script src="js/index.js">
     </script>
   </body>
 </html>
