@@ -107,13 +107,17 @@ a {
 }
 
 .container {
-  width: 1024px;
-  display: flex;
+  max-width: 1024px;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  position: relative;
+  position: inherit;
+  flex-wrap: inherit;
+}
+
+.tittle {
+  width: 100vw;
 }
 
 header {
@@ -130,7 +134,9 @@ header {
 
 .isotype {
   display: flex;
-  width: 33.3%;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
 }
 
 .isologo {
@@ -138,7 +144,7 @@ header {
   justify-content: center;
   margin: 0;
   margin-top: 40px;
-  width: 33.3%;
+  width: 400px;
 }
 
 .isologo img {
@@ -148,7 +154,7 @@ header {
 .contact {
   display: flex;
   margin-top: 40px;
-  width: 33.3%;
+  width: 400px;
   justify-content: flex-end;
   height: 20px;
 }
@@ -162,23 +168,21 @@ button{
   outline: none;
 }
 
+#button {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .icons {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-self: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   z-index: 1000;
   position: relative;
-}
-
-.isotype {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33.3%;
 }
 
 .isotype:first-child {
@@ -192,7 +196,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  opacity: 0;
+  opacity: 1;
 }
 
 .isotype>span {
@@ -219,7 +223,7 @@ button{
 }
 
 .special{
-  width: 100%;
+  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: flex-end;
@@ -231,6 +235,7 @@ button{
   width: 100%;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .demostration{
@@ -238,6 +243,15 @@ button{
 }
 
 .intro-left{
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  align-self: flex-start;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.intro-left-myself{
   display: flex;
   width: 50%;
   margin: 0;
@@ -267,7 +281,7 @@ button{
 .right {
   position: absolute;
   top: 190px;
-  left: 200px;
+  left: 300px;
   /* transform: rotate(15deg); */
 }
 
@@ -276,15 +290,26 @@ button{
 }
 
 .left {
-  position: absolute;
-top: -50px;
-/* left: 640px; */
+position: absolute;
+width: fit-content;
 right: 215px;
 transform: rotate(15deg);
 }
 
 .left img {
   width: 200px;
+}
+
+.intro-left-youtube {
+  width: 500px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.intro-right-youtube {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .youtube>div>div {
@@ -522,4 +547,24 @@ transform: rotate(15deg);
     transform: scale(1.5);
     opacity: 0;
   }
+}
+
+
+/* ----------------------------media queries------------------------- */
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
 }

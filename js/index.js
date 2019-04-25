@@ -35,6 +35,7 @@ window.addEventListener('scroll', () => {
     $bar.style.marginTop = '0';
     $isotype.style.opacity = '1';
     $button.style.opacity = '1';
+    $button.style.pointerEvents = 'all';
   }
   else {
     $bar.style.boxShadow = 'none';
@@ -43,6 +44,7 @@ window.addEventListener('scroll', () => {
     $bar.style.marginTop = '20px';
     $isotype.style.opacity = '0';
     $button.style.opacity = '0';
+    $button.style.pointerEvents = 'none';
   }
 });
 
