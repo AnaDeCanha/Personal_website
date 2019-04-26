@@ -15,7 +15,6 @@ body {
   letter-spacing: 1px;
   font-size: 20px;
   background-image: linear-gradient(to bottom right, #4A0038, #7A375C, #4E2E56);
-  overflow: scroll;
 }
 
 h1 {
@@ -26,6 +25,11 @@ h1 {
   display: block;
   line-height: 50px;
   margin-top: 40px;
+  padding: 0 40px;
+}
+
+p {
+  padding: 0 40px;
 }
 
 a {
@@ -134,7 +138,7 @@ header {
 
 .isotype {
   display: flex;
-  width: 400px;
+  width: 250px;
   align-items: center;
   justify-content: center;
 }
@@ -144,7 +148,7 @@ header {
   justify-content: center;
   margin: 0;
   margin-top: 40px;
-  width: 400px;
+  width: 250px;
 }
 
 .isologo img {
@@ -154,7 +158,7 @@ header {
 .contact {
   display: flex;
   margin-top: 40px;
-  width: 400px;
+  width: 250px;
   justify-content: flex-end;
   height: 20px;
 }
@@ -179,7 +183,7 @@ button{
   justify-content: center;
   align-self: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   z-index: 1000;
   position: relative;
@@ -245,7 +249,7 @@ button{
 .intro-left{
   display: flex;
   width: 100vw;
-  margin: 0;
+  margin-left: 100px;
   align-self: flex-start;
   justify-content: flex-start;
   /* align-items: center; */
@@ -301,7 +305,7 @@ transform: rotate(15deg);
 }
 
 .intro-left-youtube {
-  width: 500px;
+  width: 420px;
   display: flex;
   justify-content: flex-start;
 }
@@ -310,6 +314,10 @@ transform: rotate(15deg);
   width: 500px;
   display: flex;
   justify-content: flex-end;
+}
+
+.intro-left-youtube>p {
+  padding: 0 10px;
 }
 
 .youtube>div>div {
@@ -553,18 +561,137 @@ transform: rotate(15deg);
 /* ----------------------------media queries------------------------- */
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
+
+.special {
+  margin: 100px 0 0 0;
+}
+
+.special>p {
+  margin-right: 100px;
+}
+
+.intro-left {
+  margin-left: 0;
+}
+
+.right {
+  top: 280px;
+  left: 215px;
+}
+
+.right>img {
+  width: 150px;
+}
+
+.left {
+  right: 160px;
+  top: -30px;
+  transform: rotateY(25deg);
+}
+
+.left>img {
+  width: 130px;
+}
+
+.platzi {
+  width: 200px;
+  height: 200px;
+}
+
+.demostration {
+  margin-bottom: 0;
+}
+
+.platzi-bottom {
+  border: 35px solid #FFF9F2;
+}
+
+.youtube {
+  height: 270px;
+}
+
+.platzi-top {
+  border: 35px solid #FFF9F2;
+}
+
+.platzi-left {
+  border: 35px solid #FFF9F2;
+}
+
+.youtube-icon{
+  width: 150px;
+  height: 150px;
+}
+
+.youtube-ball2{
+  width: 138px;
+  height: 138px;
+}
+
+.youtube-ball{
+  width: 138px;
+  height: 138px;
+}
+
+.intro-right-youtube {
+    width: 300px;
+}
+
+.isotype>span>img {
+    margin-left: 20px;
+}
+
+button {
+  margin-right: 20px;
+}
+
+
+#mainDiv {
+  width: 150px;
+  height: 150px;
+}
+
+#boxDiv div {
+    width: 150px;
+    height: 150px;
+}
+
+#front {
+    transform: translateZ(75px);
+}
+
+
+#back {
+    transform: rotateY(180deg) translateZ(75px);
+}
+
+#left {
+    transform: rotateY(-90deg) translateX(-75px);
+}
+
+#right {
+    transform: rotateY(90deg) translateX(75px);
+}
+
+#top {
+    transform: rotateX(-90deg) translateY(-75px);
+}
+
+#bottom {
+    transform: rotateX(90deg) translateY(75px);
+}
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
 
 }
