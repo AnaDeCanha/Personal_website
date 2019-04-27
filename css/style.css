@@ -26,6 +26,7 @@ h1 {
   line-height: 50px;
   margin-top: 40px;
   padding: 0 40px;
+  width: 65%;
 }
 
 p {
@@ -120,12 +121,22 @@ a {
   flex-wrap: inherit;
 }
 
+.isotype-mobile {
+  visibility: hidden;
+  position: absolute;
+}
+
+.icons-mobile {
+  visibility: hidden;
+  position: absolute;
+}
+
 .tittle {
   width: 100vw;
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 300px;
 }
 
@@ -183,7 +194,7 @@ button{
   justify-content: center;
   align-self: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   z-index: 1000;
   position: relative;
@@ -594,29 +605,12 @@ transform: rotate(15deg);
   width: 130px;
 }
 
-.platzi {
-  width: 200px;
-  height: 200px;
-}
-
 .demostration {
   margin-bottom: 0;
 }
 
-.platzi-bottom {
-  border: 35px solid #FFF9F2;
-}
-
 .youtube {
   height: 270px;
-}
-
-.platzi-top {
-  border: 35px solid #FFF9F2;
-}
-
-.platzi-left {
-  border: 35px solid #FFF9F2;
 }
 
 .youtube-icon{
@@ -646,52 +640,269 @@ button {
   margin-right: 20px;
 }
 
-
-#mainDiv {
-  width: 150px;
-  height: 150px;
+.card {
+  margin-left: 40px;
 }
 
-#boxDiv div {
+}
+
+@media screen and (max-width: 950px) {
+
+
+
+  .platzi {
+    width: 200px;
+    height: 200px;
+  }
+
+  .platzi-bottom {
+    border: 35px solid #FFF9F2;
+  }
+
+  .platzi-top {
+    border: 35px solid #FFF9F2;
+  }
+
+  .platzi-left {
+    border: 35px solid #FFF9F2;
+  }
+
+  .intro-right {
+      margin-top: 50px;
+  }
+
+  #mainDiv {
     width: 150px;
     height: 150px;
-}
+  }
 
-#front {
-    transform: translateZ(75px);
-}
+  #boxDiv {
+      width: 150px;
+      height: 150px;
+  }
+
+  #boxDiv div {
+      width: 150px;
+      height: 150px;
+  }
+
+  #front {
+      transform: translateZ(75px);
+  }
 
 
-#back {
-    transform: rotateY(180deg) translateZ(75px);
-}
+  #back {
+      transform: rotateY(180deg) translateZ(75px);
+  }
 
-#left {
-    transform: rotateY(-90deg) translateX(-75px);
-}
+  #left {
+      transform: rotateY(-90deg) translateX(-75px);
+  }
 
-#right {
-    transform: rotateY(90deg) translateX(75px);
-}
+  #right {
+      transform: rotateY(90deg) translateX(75px);
+  }
 
-#top {
-    transform: rotateX(-90deg) translateY(-75px);
-}
+  #top {
+      transform: rotateX(-90deg) translateY(-75px);
+  }
 
-#bottom {
-    transform: rotateX(90deg) translateY(75px);
-}
+  #bottom {
+      transform: rotateX(90deg) translateY(75px);
+  }
 
 }
 
 @media screen and (max-width: 767px) {
 
+  .right {
+    visibility: hidden;
+  }
+
+  .left {
+    visibility: hidden;
+  }
+
+  .intro-right {
+    height: 25%;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .special {
+    margin-top: 200px;
+    justify-content: center;
+  }
+
+  .special p {
+    margin: 0;
+  }
+
+  .intro-left-myself {
+    width: 100vw;
+  }
+
+  .card {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .youtube {
+    height: 400px;
+  }
+
+  .intro-left-youtube{
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .intro-right-youtube{
+    width: 100vw;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .isotype:first-child {
+      width: 50vw;
+  }
+
+  .isotype:last-child {
+      width: 50vw;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .icon {
+    visibility: hidden;
+  }
+
+  .isologo {
+    visibility: hidden;
+  }
+
+  .isotype-mobile {
+    visibility: visible;
+    align-self: center;
+    margin: 10px 0 0 0;
+  }
+
+  .isotype-mobile img {
+    width: 180px;
+  }
+
+  .icons-mobile {
+    visibility: visible;
+    display: flex;
+    top: 140px;
+  }
+
+  .icon-mobile img {
+    width: 50px;
+    margin: 0 20px;
+  }
+
+  header {
+    height: 250px;
+  }
+
+  .isotype {
+    width: 0;
+  }
+
+  .contact {
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  h1 {
+    font-size: 35px;
+    width: 70vw;
+  }
+
 }
 
 @media screen and (max-width: 479px) {
 
+  h1 {
+    font-size: 30px;
+    width: 90vw;
+    padding: 0 ;
+    margin: 0 40px;
+  }
+
+  p {
+    font-size: .8em;
+  }
+
+  .special {
+    margin-top: 300px;
+  }
+
+  .modal {
+    width: 250px;
+    height: 160px;
+  }
+
+  .email-icon img{
+    width: 70px;
+  }
+
+  .modal p {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .isotype>span>img {
+    width: 70px;
+    margin: 0 0 0 20px;
+  }
+
+
+}
+
+button {
+  font-size: 15px;
 }
 
 @media screen and (max-width: 319px) {
+
+  .isotype>span>img {
+    width: 50px;
+    margin: 0 0 0 10px;
+  }
+
+  .isotype:first-child {
+      width: 50%;
+  }
+
+  .isotype:last-child {
+      width: 50%;
+  }
+
+  .special {
+    margin-top: 350px;
+  }
+
+  .icons {
+    width: 100vw;
+  }
+
+  h1 {
+    width: 70vw;
+  }
+
+  button {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .intro-right-youtube {
+    height: 250px;
+  }
+
 
 }
