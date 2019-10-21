@@ -15,7 +15,6 @@ body {
   letter-spacing: 1px;
   font-size: 20px;
   background-image: linear-gradient(to bottom right, #4A0038, #7A375C, #4E2E56);
-  overflow: scroll;
 }
 
 h1 {
@@ -26,6 +25,12 @@ h1 {
   display: block;
   line-height: 50px;
   margin-top: 40px;
+  padding: 0 40px;
+  width: 65%;
+}
+
+p {
+  padding: 0 40px;
 }
 
 a {
@@ -107,17 +112,31 @@ a {
 }
 
 .container {
-  width: 1024px;
-  display: flex;
+  max-width: 1024px;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  position: relative;
+  position: inherit;
+  flex-wrap: inherit;
+}
+
+.isotype-mobile {
+  visibility: hidden;
+  position: absolute;
+}
+
+.icons-mobile {
+  visibility: hidden;
+  position: absolute;
+}
+
+.tittle {
+  width: 100vw;
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 300px;
 }
 
@@ -130,7 +149,9 @@ header {
 
 .isotype {
   display: flex;
-  width: 33.3%;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
 }
 
 .isologo {
@@ -138,7 +159,7 @@ header {
   justify-content: center;
   margin: 0;
   margin-top: 40px;
-  width: 33.3%;
+  width: 250px;
 }
 
 .isologo img {
@@ -148,7 +169,7 @@ header {
 .contact {
   display: flex;
   margin-top: 40px;
-  width: 33.3%;
+  width: 250px;
   justify-content: flex-end;
   height: 20px;
 }
@@ -162,23 +183,21 @@ button{
   outline: none;
 }
 
+#button {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .icons {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-self: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   z-index: 1000;
   position: relative;
-}
-
-.isotype {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33.3%;
 }
 
 .isotype:first-child {
@@ -192,7 +211,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  opacity: 0;
+  opacity: 1;
 }
 
 .isotype>span {
@@ -219,7 +238,7 @@ button{
 }
 
 .special{
-  width: 100%;
+  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: flex-end;
@@ -231,6 +250,7 @@ button{
   width: 100%;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .demostration{
@@ -238,6 +258,15 @@ button{
 }
 
 .intro-left{
+  display: flex;
+  width: 100vw;
+  margin-left: 100px;
+  align-self: flex-start;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.intro-left-myself{
   display: flex;
   width: 50%;
   margin: 0;
@@ -267,7 +296,7 @@ button{
 .right {
   position: absolute;
   top: 190px;
-  left: 200px;
+  left: 300px;
   /* transform: rotate(15deg); */
 }
 
@@ -276,15 +305,30 @@ button{
 }
 
 .left {
-  position: absolute;
-top: -50px;
-/* left: 640px; */
+position: absolute;
+width: fit-content;
 right: 215px;
 transform: rotate(15deg);
 }
 
 .left img {
   width: 200px;
+}
+
+.intro-left-youtube {
+  width: 420px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.intro-right-youtube {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-left-youtube>p {
+  padding: 0 10px;
 }
 
 .youtube>div>div {
@@ -522,4 +566,344 @@ transform: rotate(15deg);
     transform: scale(1.5);
     opacity: 0;
   }
+}
+
+
+/* ----------------------------media queries------------------------- */
+
+
+@media screen and (max-width: 1023px) {
+
+.special {
+  margin: 100px 0 0 0;
+}
+
+.special>p {
+  margin-right: 100px;
+}
+
+.intro-left {
+  margin-left: 0;
+}
+
+.right {
+  top: 280px;
+  left: 215px;
+}
+
+.right>img {
+  width: 150px;
+}
+
+.left {
+  right: 160px;
+  top: -30px;
+  transform: rotateY(25deg);
+}
+
+.left>img {
+  width: 130px;
+}
+
+.demostration {
+  margin-bottom: 0;
+}
+
+.youtube {
+  height: 270px;
+}
+
+.youtube-icon{
+  width: 150px;
+  height: 150px;
+}
+
+.youtube-ball2{
+  width: 138px;
+  height: 138px;
+}
+
+.youtube-ball{
+  width: 138px;
+  height: 138px;
+}
+
+.intro-right-youtube {
+    width: 300px;
+}
+
+.isotype>span>img {
+    margin-left: 20px;
+}
+
+button {
+  margin-right: 20px;
+}
+
+.card {
+  margin-left: 40px;
+}
+
+}
+
+@media screen and (max-width: 950px) {
+
+
+
+  .platzi {
+    width: 200px;
+    height: 200px;
+  }
+
+  .platzi-bottom {
+    border: 35px solid #FFF9F2;
+  }
+
+  .platzi-top {
+    border: 35px solid #FFF9F2;
+  }
+
+  .platzi-left {
+    border: 35px solid #FFF9F2;
+  }
+
+  .intro-right {
+      margin-top: 50px;
+  }
+
+  #mainDiv {
+    width: 150px;
+    height: 150px;
+  }
+
+  #boxDiv {
+      width: 150px;
+      height: 150px;
+  }
+
+  #boxDiv div {
+      width: 150px;
+      height: 150px;
+  }
+
+  #front {
+      transform: translateZ(75px);
+  }
+
+
+  #back {
+      transform: rotateY(180deg) translateZ(75px);
+  }
+
+  #left {
+      transform: rotateY(-90deg) translateX(-75px);
+  }
+
+  #right {
+      transform: rotateY(90deg) translateX(75px);
+  }
+
+  #top {
+      transform: rotateX(-90deg) translateY(-75px);
+  }
+
+  #bottom {
+      transform: rotateX(90deg) translateY(75px);
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .right {
+    visibility: hidden;
+  }
+
+  .left {
+    visibility: hidden;
+  }
+
+  .intro-right {
+    height: 25%;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .special {
+    margin-top: 200px;
+    justify-content: center;
+  }
+
+  .special p {
+    margin: 0;
+  }
+
+  .intro-left-myself {
+    width: 100vw;
+  }
+
+  .card {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .youtube {
+    height: 400px;
+  }
+
+  .intro-left-youtube{
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .intro-right-youtube{
+    width: 100vw;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .isotype:first-child {
+      width: 50vw;
+  }
+
+  .isotype:last-child {
+      width: 50vw;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .icon {
+    visibility: hidden;
+  }
+
+  .isologo {
+    visibility: hidden;
+  }
+
+  .isotype-mobile {
+    visibility: visible;
+    align-self: center;
+    margin: 10px 0 0 0;
+  }
+
+  .isotype-mobile img {
+    width: 180px;
+  }
+
+  .icons-mobile {
+    visibility: visible;
+    display: flex;
+    top: 140px;
+  }
+
+  .icon-mobile img {
+    width: 50px;
+    margin: 0 20px;
+  }
+
+  header {
+    height: 250px;
+  }
+
+  .isotype {
+    width: 0;
+  }
+
+  .contact {
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  h1 {
+    font-size: 35px;
+    width: 70vw;
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+
+  h1 {
+    font-size: 30px;
+    width: 90vw;
+    padding: 0 ;
+    margin: 0 40px;
+  }
+
+  p {
+    font-size: .8em;
+    font-weight: normal;
+  }
+
+  .special {
+    margin-top: 300px;
+  }
+
+  .modal {
+    width: 250px;
+    height: 160px;
+  }
+
+  .email-icon img{
+    width: 70px;
+  }
+
+  .modal p {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .isotype>span>img {
+    width: 70px;
+    margin: 0 0 0 20px;
+  }
+
+
+}
+
+button {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 319px) {
+
+  .isotype>span>img {
+    width: 50px;
+    margin: 0 0 0 10px;
+  }
+
+  .isotype:first-child {
+      width: 50%;
+  }
+
+  .isotype:last-child {
+      width: 50%;
+  }
+
+  .special {
+    margin-top: 350px;
+  }
+
+  .icons {
+    width: 100vw;
+  }
+
+  h1 {
+    width: 70vw;
+  }
+
+  button {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .intro-right-youtube {
+    height: 250px;
+  }
+
+
 }
